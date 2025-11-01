@@ -1,73 +1,155 @@
-# Welcome to your Lovable project
+# ShopEase - Modern Shopping Cart Application
 
-## Project info
+A fully functional ReactJS-based shopping cart application with real-time cart updates, product filtering, and persistent storage.
 
-**URL**: https://lovable.dev/projects/ffe3d7eb-6a59-4a49-81a3-ea383b52d708
+## Features
 
-## How can I edit this code?
+### Core Functionality
+- **Product Catalog**: Browse through a curated collection of products with images, prices, and stock information
+- **Shopping Cart Management**: 
+  - Add products to cart with real-time updates
+  - Remove items from cart
+  - Update quantities with stock validation
+  - Automatic price calculations
+- **Product Filtering**: Filter by category and price range
+- **Local Storage Persistence**: Cart data persists across browser sessions
+- **Checkout Flow**: Mock checkout with order confirmation
 
-There are several ways of editing your application.
+### User Experience
+- Responsive design that works on all devices
+- Smooth animations and transitions
+- Toast notifications for user actions
+- Stock validation to prevent over-ordering
+- Clean, modern UI with Material-UI icons
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ffe3d7eb-6a59-4a49-81a3-ea383b52d708) and start prompting.
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Context API** - State management
+- **Tailwind CSS** - Styling framework
+- **Material-UI Icons** - Icon library
+- **Vite** - Build tool
+- **shadcn/ui** - UI components
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Structure
 
-**Use your preferred IDE**
+```
+src/
+├── components/
+│   ├── ProductCard.tsx       # Individual product display
+│   ├── ShoppingCart.tsx      # Cart sidebar with items
+│   └── ProductFilters.tsx    # Category and price filters
+├── contexts/
+│   └── CartContext.tsx       # Cart state management
+├── data/
+│   └── products.ts           # Sample product data
+├── pages/
+│   └── Index.tsx             # Main shopping page
+└── index.css                 # Design system tokens
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Setup Instructions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd <project-directory>
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and navigate to:
+```
+http://localhost:8080
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Usage Guide
 
-**Use GitHub Codespaces**
+### Adding Products to Cart
+1. Browse the product catalog
+2. Click "Add to Cart" on any product
+3. Cart updates automatically with item count and total price
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Managing Cart Items
+- **Increase/Decrease Quantity**: Use the +/- buttons in the cart
+- **Manual Quantity Entry**: Type directly into the quantity field
+- **Remove Item**: Click the delete icon
+- **Clear Cart**: Use "Clear All" button
 
-## What technologies are used for this project?
+### Filtering Products
+1. Select a category from the dropdown
+2. Adjust price range using the sliders
+3. Click "Apply" to filter products
+4. Use "Reset" to clear all filters
 
-This project is built with:
+### Checkout
+1. Add items to your cart
+2. Click "Proceed to Checkout"
+3. Review your order in the confirmation dialog
+4. Confirm to complete the purchase (mock)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Features Implemented
 
-## How can I deploy this project?
+✅ Product list with images, prices, and stock
+✅ Add to cart functionality
+✅ Remove from cart
+✅ Update quantities with validation
+✅ Real-time total calculation
+✅ Context API state management
+✅ Local storage persistence
+✅ Category and price filters
+✅ Checkout flow with confirmation
+✅ Responsive design
+✅ Toast notifications
+✅ Stock validation
 
-Simply open [Lovable](https://lovable.dev/projects/ffe3d7eb-6a59-4a49-81a3-ea383b52d708) and click on Share -> Publish.
+## Design System
 
-## Can I connect a custom domain to my Lovable project?
+The application uses a custom design system with:
+- **Primary Color**: Teal (#0ba9b5) - Professional and trustworthy
+- **Accent Color**: Coral (#f26543) - Energetic CTAs
+- **Typography**: System fonts for optimal performance
+- **Spacing**: Consistent 8px grid system
+- **Animations**: Smooth transitions (0.3s cubic-bezier)
 
-Yes, you can!
+## Build for Production
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+npm run build
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The build output will be in the `dist` directory, ready for deployment.
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+Feel free to submit issues and enhancement requests!
+
+## License
+
+MIT License - feel free to use this project for learning or commercial purposes.
+
+---
+
+**Built with ❤️ using React and modern web technologies**
