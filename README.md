@@ -59,7 +59,7 @@ src/
 
 1. Clone the repository:
 ```bash
-git https://github.com/Ghansham07/your-cart-ui.git
+git clone https://github.com/Ghansham07/your-cart-ui.git
 cd <project-directory>
 ```
 
